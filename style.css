@@ -1,0 +1,209 @@
+/* *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+}
+
+html,body{
+    height: 100%;
+    width: 100%;
+}
+
+#main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    background: rgb(185, 243, 185);
+}
+
+#panel{
+    overflow: hidden;
+    width: 80%;
+    height: 80%;
+    border-radius: 5px;
+    background: #fff;
+    
+}
+
+#ptop{
+    width: 100%;
+    justify-content: space-between;
+    height: 85px;
+    background: rgb(37, 116, 37);
+    display: flex;
+    color: #fff;
+    padding: 0 30%;
+    align-items: center;
+    
+}
+.elem{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.elem h2{
+    font-weight: 500;
+    font-size: 22px;
+}
+.box{
+    padding: 8px 10px;
+    color: rgb(50, 150, 50);
+font-weight: 600;
+    background: #fff;
+    border-radius: 5px;
+    font-size: 20px ;
+
+}
+
+#pbtm{
+    width: 100%;
+    height: calc(100% - 85px);
+    padding: 20px;
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+
+.bubble{
+    width: 40px;
+    height: 40px;
+    background: rgb(11, 83, 11);
+    color: #fff;
+    border-radius: 50%;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 500;
+    
+}
+
+.bubble:hover{
+    background: rgb(10, 97, 10);
+    cursor: pointer;
+} */
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+}
+
+#main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    background: rgb(185, 243, 185);
+}
+
+#panel {
+    overflow: hidden;
+    width: 90%; /* Adjusted for better spacing */
+    max-width: 700px; /* Adjusted for better spacing */
+    height: 90%; /* Adjusted for better spacing */
+    max-height: 700px; /* Adjusted for better spacing */
+    border-radius: 5px;
+    background: #fff;
+    display: flex;
+    flex-direction: column; /* Adjusted to stack elements vertically on smaller screens */
+}
+
+#ptop {
+    width: 100%;
+    height: 85px;
+    background: rgb(37, 116, 37);
+    display: flex;
+    color: #fff;
+    padding: 0 20px; /* Adjusted for better spacing on smaller screens */
+    align-items: center;
+    justify-content: space-between;
+}
+
+.elem {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Adjusted for better spacing */
+}
+
+.elem h2 {
+    font-weight: 500;
+    font-size: 18px; /* Adjusted font size for better fit */
+}
+
+.box {
+    padding: 8px 10px;
+    color: rgb(50, 150, 50);
+    font-weight: 600;
+    background: #fff;
+    border-radius: 5px;
+    font-size: 18px; /* Adjusted font size for better fit */
+}
+
+#pbtm {
+    width: 100%;
+    flex-grow: 1; /* Expanded to take remaining space */
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.bubble {
+    width: 40px;
+    height: 40px;
+    min-width: 30px; /* Adjusted for smaller screens */
+    min-height: 30px; /* Adjusted for smaller screens */
+    background: rgb(11, 83, 11);
+    color: #fff;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 500;
+    margin: 5px; /* Adjusted for better spacing between bubbles */
+}
+
+.bubble:hover {
+    background: rgb(10, 97, 10);
+    cursor: pointer;
+}
+
+@media (max-width: 600px) {
+    /* Adjustments for smaller screens */
+    #panel {
+        width: 95%;
+        max-width: none;
+        height: 95%;
+        max-height: none;
+    }
+
+    .elem h2,
+    .box {
+        font-size: 16px;
+    }
+
+    .bubble {
+        width: 30px;
+        height: 30px;
+        min-width: 25px;
+        min-height: 25px;
+        font-size: 14px;
+    }
+}
